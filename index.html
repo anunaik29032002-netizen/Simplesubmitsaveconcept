@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>HTML Linked to PHP & MySQL</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div class="card">
+<h2>My Project</h2>
+
+<!
+-Form links directly to the separate backend.php file -->
+<form id="noteForm" class="input-group">
+<input type="text" id="userInput" name="noteText" placeholder="Type something...">
+<button type="submit" id="submitBtn">Submit & Save</button>
+</form>
+<!
+-Display records fetched from database by backend.php -->
+<ul id="dataList">
+<!
+-PHP script included or rendered here -->
+<?php include 'backend.php'; ?>
+</ul>
+</div>
+<script src="script.js"></script>
+</body>
+</html>
